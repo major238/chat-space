@@ -1,0 +1,59 @@
+.rightcontent{
+width: calc(100% - 240px);
+height:calc(100% - 90px);
+padding-left: 240px;
+ .headercontent{
+ 	height: 80px;
+ 	background-color: white;
+  display: flex;
+ 	#chatname{
+ 	  position: relative;top:25px;bottom:15px;
+    color: #333333;
+    font-size: 20px;
+ 	   #loginuser{
+ 	    font-size: 12px;
+      color:#999999;
+      position: relative;top:10px;bottom:5px;
+ 	   }
+  }
+   .editbox{
+     background-color: white;
+     border:solid aqua;
+     height: 40px;
+     width: 80px;
+     margin-top: 20px;
+     margin-right: 40px;
+     margin-left: calc(100% - 220px);
+     margin-bottom: 20px;
+     display:block;
+     #edit{
+      height: 20px;
+      weight: 20px;
+      margin: auto 10px;
+      margin-top:7px;
+      color: black;
+     }
+    }
+  }
+
+  .chatspace{
+   	padding-top:  48px;
+   	height: calc(100% - 80px);
+   	 #username{
+   	  display:inline-block;
+   	  font-size:16px;
+      color:#434A54;
+      font-weight: bold;
+     }
+   	 #timestamp{
+   	  display: inline;
+ 	    font-size: 12px;
+      color:#999999;
+      margin-left: 10px;
+ 	   }
+     #toukou{
+      margin-top: 10px;
+      font-size: 12px;
+     }
+  }
+}

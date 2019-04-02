@@ -1,0 +1,45 @@
+body{
+height: 100%;
+width: 100%;
+  .leftcontent{
+	background-color: #2f3e51;
+  float:left;
+	height: 100%;
+	width: 200px;
+   #user_field{
+    padding-left: 20px;
+    background-color: #253141;
+    height:80px;
+    padding-right:20px;
+    #chatname{
+    	color: $siro-mozi;
+      position:relative;top:30px;bottom:30px;
+      font-weight: bold;
+      display:flex;
+      height: 20px;
+      .fa{
+      margin-top: 5px;
+      margin-left: 30px;
+     }
+      .fa.fa-cog{
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+    }
+   }
+  .room_field{
+      padding-left: 20px;
+      color:$siro-mozi;
+      .heya{
+        padding-top: 20px;
+        padding-bottom:5px;
+        font-size:15px;
+        #lefttoukou{
+         padding-bottom: 20px;
+         font-size: 11px;
+
+        }
+       }
+  }
+  }
+ }

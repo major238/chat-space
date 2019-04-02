@@ -1,0 +1,21 @@
+.leftcontent
+ #user_field
+  #chatname
+   username
+   = fa_icon("edit")
+   = fa_icon("cog")
+ .room_field
+  %list-style-type:none
+  = render "room_list"
+.rightcontent
+ .headercontent
+  #chatname
+   heya
+   #loginuser Members:username
+  .editbox
+   #edit Edit
+ = render "chatspace"
+.sendspace
+ .textbox
+  #type type a message
+ .sendbotton SEND

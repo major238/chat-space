@@ -1,0 +1,40 @@
+.sendspace{
+    width: calc(100% - 200px);
+    height: 90px;
+    background-color: #c0c0c0;
+    display: flex;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    left:200px;
+    .textbox{
+      background-color:  white;
+      margin-top: 20px;
+      margin-left: 40px;
+      margin-bottom: 20px;
+      height:50px;
+      width: 1050px;
+      #type{
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        color: #434A54;
+        font-size: 16px;
+      }
+        }
+    .sendbotton{
+      background-color:#0066FF;
+      margin-top:  20px;
+      margin-left: 15px;
+      margin-bottom:20px;
+      height:50px;
+      width: 100px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:white;
+      font-weight: bold;
+      }
+    }
+
