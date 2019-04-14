@@ -1,24 +1,52 @@
-# README
+*database設計*
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## membersテーブル
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-* Ruby version
+### Association
+- belongs_to :group
+- belongs_to :user
 
-* System dependencies
+## usersテーブル
 
-* Configuration
+|Column|Type|Options|
+|------|----|-------|
+|handle_name|string|null: false, length: { maximum: 15}|
+|email|string|null: false,unique: true|
+|password_digest|string|null: false,length: { minimum: 6}|
+|tweet_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-* Database creation
+### Association
+- has_many :tweets, through: :members
+- has_many :groups, through: :members
 
-* Database initialization
+## tweetsテーブル
 
-* How to run the test suite
+|Column|Type|Options|
+|------|----|-------|
+|tweet|text|null: false,length: { maximum: 125}|
+|timestamp|timestamp|null: false|
+|temp_file|text|null: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* Deployment instructions
+## groupsテーブル
 
-* ...
+|Column|Type|Options|
+|------|----|-------|
+|groupname|string|null: false,length: { maximum: 15}|
+|user_id|integer|null: false, foreign_key: true|
+|tweet_id|integer|null: false, foreign_key: true|
+
+### Association
+- has_many :tweets, through: :members
+- has_many :users, through: :members
