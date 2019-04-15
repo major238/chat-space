@@ -4,8 +4,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -18,8 +18,8 @@
 |handle_name|string|null: false, length: { maximum: 15}|
 |email|string|null: false,unique: true|
 |password_digest|string|null: false,length: { minimum: 6}|
-|tweet_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|tweet|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - has_many :tweets, through: :members
@@ -31,9 +31,9 @@
 |------|----|-------|
 |tweet|text|null: false,length: { maximum: 125}|
 |timestamp|timestamp|null: false|
-|temp_file|text|null: true|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|image|string|null: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -43,9 +43,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false,length: { maximum: 15}|
-|user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|name|string|null: false,length: { maximum: 15}|
+|user|reference|null: false, foreign_key: true|
+|tweet|reference|null: false, foreign_key: true|
 
 ### Association
 - has_many :tweets, through: :members
