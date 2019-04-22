@@ -15,21 +15,21 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,unique: true,add_index :users,  :name|
+|name|string|null: false,unique: true,index: true|
 |email|string|null: false,unique: true|
 |password_digest|string|null: false,length: { minimum: 6}|
 
 ### Association
 - has_many :tweets
+- has_many :members
 - has_many :groups, through: :members
 
 ## tweetsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|tweet|text|null: true|
-|created_at|timestamp|null: false|
-|image|string|null: true|
+|content|text||
+|image|string||
 |user|reference|null: false, foreign_key: true|
 |group|reference|null: false, foreign_key: true|
 
@@ -45,4 +45,5 @@
 
 ### Association
 - has_many :tweets
+- has_many :members
 - has_many :users, through: :members
