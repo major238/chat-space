@@ -20,7 +20,7 @@
 |password_digest|string|null: false,length: { minimum: 6}|
 
 ### Association
-- has_many :tweets, through: :members
+- has_many :tweets
 - has_many :groups, through: :members
 
 ## tweetsテーブル
@@ -44,5 +44,5 @@
 |name|string|null: false|
 
 ### Association
-- has_many :tweets, through: :members
+- has_many :tweets
 - has_many :users, through: :members
