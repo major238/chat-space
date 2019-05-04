@@ -27,19 +27,20 @@ width: 100%;
         margin-left: 10px;
       }
    }
-  .room_field{
+  .groups{
       padding-left: 20px;
       color:$siro-mozi;
-      .heya{
+      .group{
+       .group__name{
         padding-top: 20px;
         padding-bottom:5px;
         font-size:15px;
-        #lefttoukou{
+      }
+        .group__massage{
          padding-bottom: 20px;
          font-size: 11px;
-
+         }
         }
-       }
   }
   }
  }
